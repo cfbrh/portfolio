@@ -1,0 +1,373 @@
+.gradient_background {
+    background: linear-gradient(90deg, rgba(238,174,202,1), rgba(148,187,233,1));
+    background-size: 300% 300%;
+    animation: gradient-move 20s ease infinite;
+}
+
+@keyframes gradient-move {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #50467e;
+    padding-top: 60px;
+}
+
+header {
+    font-size: 1.4em;
+    position: fixed;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.nav-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; /* 5 列 */
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: bold;
+    background: linear-gradient(90deg, #B76E79, #C7A17A);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    background: linear-gradient(90deg, #C7A17A, #B76E79); /* 反转渐变方向 */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        text-align: center;
+        gap: 15px;
+    }
+}
+
+section {
+    padding: 50px;
+    text-align: center;
+    margin-bottom: 0; 
+    padding-bottom: 20px;
+
+}
+
+h2 a {
+    text-align: center; 
+    font-weight: bold;
+    text-decoration: none;
+    background: linear-gradient(90deg, #B76E79, #C7A17A);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: color 0.3s;
+}
+
+h2 a:hover {
+    background: linear-gradient(90deg, #C7A17A, #B76E79); /* 反转渐变方向 */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* About */
+
+#about {
+    margin-top: 50px; 
+}
+
+.introduction {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(148, 187, 233, 0.3)); 
+    padding: 30px;
+    margin: 20px auto;
+    width: 70%;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.introduction:hover {
+    transform: scale(1.02); /* 轻微放大效果 */
+}
+
+#copyMessageText {
+    position: absolute;
+    left: -50px;  /* "Copied!" appears to the left of the email */
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px 8px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    white-space: nowrap;
+    display: none; /* Initially hidden */
+}
+
+.profile-img {
+    width: 200px; /* 控制头像大小 */
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid white;
+}
+
+.animated-text {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #50467e;
+    animation: fadeInUp 1.2s ease-in-out;
+    text-align: left;
+}
+
+.highlight {
+    font-weight: bold;
+    color: #2a6fdb; /* 关键字突出 */
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .introduction {
+        flex-direction: column;
+        text-align: center;
+        width: 90%;
+    }
+
+    .profile-img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+
+/* Project */
+
+.project {
+    text-align: left;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(148, 187, 233, 0.3)); 
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.hidden {
+    display: none;
+}
+
+#readMoreBtn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(148, 187, 233, 0.3));
+    color: #50467e;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+    justify-content: center;
+    align-items: center;
+    display: flex; 
+    width: 200px; 
+    height: 40px; 
+    margin: 20px auto; 
+    font-weight: bold;
+    border-radius: 10px; 
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+#readMoreBtn:hover {
+    background-color: #50467e;
+    transform: scale(1.05);
+}
+
+#readMoreBtn:active {
+    transform: scale(0.95);
+}
+
+.project a{
+    text-decoration: none; 
+    color: inherit;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 20px;
+    padding: 20px;
+    width: 80%;
+    margin: auto;
+}
+
+
+.project:hover {
+    transform: translateY(-5px);
+}
+
+.tag {
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #333;
+    font-size: 0.8em;
+    font-weight: bold;
+    padding: 3px 8px;
+    border-radius: 10px;
+    margin-left: 8px;
+    text-transform: uppercase;
+}
+
+.frontend { background-color: #ffcc80; }  /* Light orange */
+.backend { background-color: #90caf9; }   /* Light blue */
+.fullstack { background-color: #a5d6a7; } /* Light green */
+.ios { background-color: #ce93d8; }        /* Light purple */
+.ar { background-color: #ffab91; }         /* Light coral */
+.ml { background-color: #f48fb1; }         /* Light pink */
+.unity { background-color: #FFFACD; }  /* Lemon */
+.macos { background-color: #FAF0E6; }  /* Linen */ 
+
+
+
+/* 适配小屏幕 */
+@media (max-width: 768px) {
+    .projects-container {
+        grid-template-columns: 1fr; /* 小屏幕单列 */
+        width: 90%;
+    }
+}
+
+
+/* footer */
+
+footer {
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    min-height: 100px;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+  }
+  
+  footer .social_icon {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 10px 0;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  
+  footer .social_icon li {
+    list-style: none;
+  }
+  footer .social_icon li a {
+    font-size: 2em;
+    color: #ccc;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+  }
+  footer .social_icon li a:hover {
+    transform: translateY(-15px);
+    color: #50467e;
+  }
+  
+
+  footer p {
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    text-decoration: none;
+    font-weight: bold;
+    background: linear-gradient(90deg, #B76E79, #C7A17A);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: color 0.3s;
+  }
+
+  footer p:hover {
+    background: linear-gradient(90deg, #C7A17A, #B76E79); /* 反转渐变方向 */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+  
+  #copyMessage {
+    position: absolute;
+    left: -50px;  /* 控制 "Copied!" 出现在图标左侧 */
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px 8px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    white-space: nowrap;
+}
+
+
+  
+
+  
