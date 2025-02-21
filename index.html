@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wenjia Zhang | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="gradient_background">
+    <header>
+        <nav>
+            <ul>
+                <div class="nav-container">
+                    <li></li>
+                    <li><a href="#">About Me</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Social Media</a></li>
+                    <li></li>
+                </div>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <div class="introduction">
+            <img src="image.jpg" alt="Wenjia Zhang" class="profile-img">
+            <p class="animated-text">Hi! I am <a href="https://www.linkedin.com/in/wzhang0820/" style="text-decoration: none; color: black"><strong>Wenjia Zhang</strong></a>, a passionate <span class="highlight">Software Engineer</span> focusing on 
+            <span class="highlight">Full-Stack</span> Development, <span class="highlight">iOS</span> Development, and <span class="highlight">Machine Learning</span>.
+            I graduated with a <strong>Master</strong>’s degree in <strong>Computer Science</strong> from <strong>Columbia University</strong> in 2024.<br>Now, I am eager to explore <strong>new work opportunities</strong>. I love designing dynamic and engaging web experiences because I am inspired by the fluidity of water and the grace of floating clouds.<br>If you think I would be a great fit, feel free to reach out at 
+            <span style="position: relative;">
+                <a href="#" id="copyEmailText" onclick="copyEmail()" 
+                   style="text-decoration: none; color: black; cursor: pointer;">
+                   <strong>wz2647@columbia.edu</strong>
+                </a>
+                <span id="copyMessageText">Gmail Copied!</span>
+            </span>(click to copy). 🚀</p>
+
+            <script>
+                function copyEmail() {
+                    event.preventDefault();
+                    const email = "wz2647@columbia.edu";
+                    navigator.clipboard.writeText(email).then(() => {
+                        const message = document.getElementById("copyMessageText");
+                        message.style.display = "inline"; // Show "Copied!" message
+            
+                        setTimeout(() => {
+                            message.style.display = "none"; // Hide after 3 seconds
+                        }, 3000);
+                    }).catch(err => {
+                        console.error("Failed to copy: ", err);
+                    });
+                }
+            </script>
+        </div>
+    </section>
+    
+
+    <section id="projects">
+        <h2><a>Projects</a></h2>
+        <div class="projects-container">
+            <div class="project">
+                <h3>Tin Dog 🐶🐾<span class="tag frontend">Frontend</span></h3>
+                <p>✨ A fully responsive website for dog lovers, designed with <strong>CSS gradients</strong> and <strong>Bootstrap</strong> for a sleek and interactive user experience.</p>
+                <a href="https://github.com/cfbrh/tin-dog" target="_blank">GitHub</a>  | 
+                <a href="https://cfbrh.github.io/tin-dog/" target="_blank">View Tin Dog</a>
+            </div>
+
+            <div class="project">
+                <h3>Family Travel Tracker 🌍✈️<span class="tag fullstack">Fullstack</span></h3>
+                <p>📍 This web application built with <strong>Node.js</strong>, <strong>Express</strong>, <strong>EJS</strong>, and <strong>PostgreSQL</strong> allows multiple users to add travel locations on a map and light up their journey.</p>
+                <a href="https://github.com/cfbrh/family-travel-tracker" target="_blank">GitHub</a>  | 
+                <a href="https://youtu.be/j2ANgiXb83Q?si=sg71tnZA--qwFy6-" target="_blank">Demo</a>
+            </div>
+
+            <div class="project">
+                <h3>Chat App 💬📡<span class="tag backend">Backend</span><span class="tag ios">iOS</span></h3>
+                    <p>
+                        👥 Built a secure messaging app using <strong>Firebase Firestore</strong> (NoSQL DB) and <strong>Firebase Authentication</strong>, enabling real-time communication with instant updates.
+                    </p>
+                <a href="https://github.com/cfbrh/flash-chat" target="_blank">GitHub</a>  | 
+                <a href="https://youtu.be/_YPiKgFa8VU?si=SbRa_IBrsmmTPgUj" target="_blank">Demo</a>
+            </div>
+
+            <div class="project">
+                <h3>To-Do List 📅📝<span class="tag fullstack">Fullstack</span><span class="tag ios">iOS</span></h3>
+                <p>
+                    🖥️ <strong>Web Version</strong> – Organize tasks by <em>daily, weekly, and monthly</em> categories, with options to <em>add, edit, and delete</em> plans.<br>
+                </p>
+                <a href="https://github.com/cfbrh/todolost-web" target="_blank">GitHub</a>  | 
+                <a href="https://youtu.be/4tX0WybiggU?si=ZPBHb4QOPpwi-reL" target="_blank">Demo</a>
+                <p>
+                    📱 <strong>iOS Version</strong> – Categorize tasks by different types, <em>add, edit, delete, and search</em> tasks efficiently.
+                </p>
+                <a href="https://github.com/cfbrh/todolist-ios" target="_blank">GitHub</a>  | 
+                <a href="https://youtube.com/shorts/7vLueBWEns0?si=UU6aM4WMUHEE_-WQ" target="_blank">Demo</a>  
+            </div>
+            
+            
+            
+
+            <div class="project">
+                <h3>Video Editor 🎬📱<span class="tag ios">iOS</span></h3>
+                    <p>
+                        📹 Developed a video editing app using <strong>AVFoundation</strong> & <strong>AVKit</strong>, allowing users to <em>trim videos, overlay text, record voiceovers, and apply effects</em>.
+                    </p>
+
+                <a href="https://github.com/cfbrh/VIdeoEditorApp" target="_blank">GitHub</a>  | 
+                <a href="https://youtu.be/7O9JUTe7m8Y?si=9-S2JmADXp_oYlgT" target="_blank">Demo</a>
+            </div>
+
+    
+
+            <div class="project">
+                <h3>LLM-Powered Search Optimization 🔍🤖<span class="tag ml">ML</span><span class="tag backend">Backend</span></h3>
+                    <p>
+                        💻 Developed an NLP-enhanced search system on GCP using <strong>Google Search API</strong>, <strong>SpaCy</strong>, and <strong>SpanBERT</strong>. Integrated <strong>LLM-powered query prediction</strong> for improved search efficiency.
+                    </p>
+                <a href="https://github.com/cfbrh/proj2/tree/main" target="_blank">GitHub</a>
+            </div>
+            
+            <div class="project hidden">
+                <h3>Second-Hand Marketplace 🛍️🔄<span class="tag fullstack">Fullstack</span></h3>
+                <p>
+                    🛒 Led a team to develop a <strong>Ruby on Rails</strong> & <strong>React.js</strong> marketplace with a microservices architecture.<br>🏬 Implemented <strong>REST APIs</strong> with authentication (<strong>Google OAuth</strong>) on <strong>AWS EC2</strong> and deployed a responsive UI on <strong>AWS S3</strong>.<br>💸 Built a <strong>CI/CD pipeline</strong> with <strong>Jenkins</strong>, ensuring 100% test coverage using <strong>RSpec & Cucumber (BDD & TDD)</strong>.
+                </p>
+                <a href="https://github.com/orgs/TechTitans-SAAS/repositories" target="_blank">GitHub</a> 
+            </div>
+
+            <div class="project hidden">
+                <h3>Tomato Timer 🍅⏳<span class="tag backend">Backend</span></h3>
+                <p>⏰ A simple and effective <strong>Pomodoro timer</strong> built with <strong>Python</strong> and <strong>Tkinter</strong>, helping users manage work and break intervals to boost productivity.</p>
+                <a href="https://github.com/cfbrh/tomato-timer" target="_blank">GitHub</a>  | 
+                <a href="https://youtu.be/vkEOSUMu2fo?si=ShF_6UpnzFC0aLqq" target="_blank">Demo</a>
+            </div>
+
+            <div class="project hidden">
+                <h3>Weather App ☀️🌧️<span class="tag ios">iOS</span><span class="tag backend">Backend</span></h3>
+                <p>❄️ Developed a weather app using <strong>Swift</strong> and <strong>OpenWeather API</strong>, integrating GPS data to provide real-time weather updates with automatic day/night mode for a seamless user experience.</p>
+                <a href="https://github.com/cfbrh/clima" target="_blank">GitHub</a>  | 
+                <a href="https://youtube.com/shorts/bmlHPWY-rtk?si=0xXucWOR3vwtzX26" target="_blank">Demo</a>
+            </div>
+
+            <div class="project hidden">
+                <h3>Workout Tracker 🏋️‍♂️📊<span class="tag backend">Backend</span><span class="tag ml">ML</span></h3>
+                    <p>
+                        🧘‍♀️ Created a fitness tracking system using <strong>Python</strong> and <strong>Nutritionix API</strong>, allowing users to log exercises with natural language input.<br>🤸‍♀️ Data is automatically processed and stored in <strong>Google Sheets</strong> for easy tracking.
+                    </p>
+                <a href="https://github.com/cfbrh/workout-tracker/tree/main" target="_blank">GitHub</a>  | 
+                <a href="https://youtu.be/DbzUkKr__Tw?si=Ob8Tp5O1Zrdbqx50" target="_blank">Demo</a>
+            </div>
+
+            <div class="project hidden">
+                <h3>Latest Musicals in NYC 🎭🎶<span class="tag ios">iOS</span></h3>
+                <p>
+                    🎵 Designed a musical lover's app to explore the latest shows in NYC. Users can <strong>mark</strong> and <strong>filter</strong> musicals as "Want to Watch" or "Loved", view show descriptions, and locate venues on an <strong>interactive map</strong>.
+                </p>
+                <a href="https://github.com/cfbrh/latestmusical" target="_blank">GitHub</a>  | 
+                <a href="https://youtu.be/tr4PXvuUm6U?si=pTJb5bpcn-GsXlon" target="_blank">Demo</a>
+            </div>
+            
+            
+            <div class="project hidden">
+                <h3>Dice Games 🎲✨<span class="tag frontend">Frontend</span><span class="tag ios">iOS</span><span class="tag ar">AR</span></h3>
+                <p>🖥️ <strong>Dice Duel</strong> – Refresh to roll and see who wins!</p>
+                <a href="https://github.com/cfbrh/Dice-web" target="_blank">GitHub</a>  | 
+                <a href="https://cfbrh.github.io/Dice-web/" target="_blank">Play Dice Duel</a>
+                <p>📱 <strong>Dice Roller</strong> – Add and roll multiple dice in an interactive AR space!</p> 
+                <a href="https://github.com/cfbrh/Dice-iOS" target="_blank">GitHub</a>  | 
+                <a href="https://youtube.com/shorts/L_JYqZ-kLZM?si=7REYoBA5Rd_WeiAY" target="_blank">Demo</a>
+            </div>
+
+            <div class="project hidden">
+                <h3>Interactive Instruments 🎼🌈<span class="tag frontend">Frontend</span><span class="tag ios">iOS</span></h3>
+                <p>🥁 <strong>Drum Kit</strong> – Tap your keyboard and unleash your inner drummer!</p>
+                <a href="https://github.com/cfbrh/drum" target="_blank">GitHub</a>  | 
+                <a href="https://cfbrh.github.io/drum/" target="_blank">Play Drum Kit</a> 
+                <p>🎹 <strong>Xylophone</strong> – Play a colorful xylophone right on your iPhone!</p>
+                <a href="https://github.com/cfbrh/Xylophone" target="_blank">GitHub</a>  | 
+                <a href="https://youtube.com/shorts/XtmGxwhYNtM?si=GZH2N6iY3oba89EV" target="_blank">Demo</a>
+            </div>
+
+            <div class="project hidden">
+                <h3>Egg Timer ⏳🥚<span class="tag ios">iOS</span></h3>
+                <p>⏲️ Developed a beautifully designed <strong>egg timer app</strong> that helps users boil eggs to perfection based on their preferred doneness level.</p>
+                <a href="https://github.com/cfbrh/egg-timer" target="_blank">GitHub</a>  | 
+                <a href="https://youtu.be/3RjX9PlEE3M?si=jFHBMZXTaLATwM-V" target="_blank">Demo</a>
+            </div>
+            
+            <div class="project hidden">
+                <h3>Destini 📖🔮<span class="tag ios">iOS</span></h3>
+                <p>📚 Built an interactive <strong>storytelling app</strong> where users shape the narrative based on their choices, creating a dynamic and engaging adventure.</p>
+                <a href="https://github.com/cfbrh/destini" target="_blank">GitHub</a>  | 
+                <a href="https://youtu.be/8rngKAtUn5o?si=QX7iMUAN4TGGRY40" target="_blank">Demo</a>
+            </div>
+            
+            <div class="project hidden">
+                <h3>BMI Calculator ⚖️💪<span class="tag ios">iOS</span></h3>
+                <p>🥊 Designed a <strong>health tracking app</strong> that calculates Body Mass Index (BMI) based on user weight and height, providing tailored health advice.</p>
+                <a href="https://github.com/cfbrh/bmi-cal" target="_blank">GitHub</a>  | 
+                <a href="https://youtu.be/MtqetSQ6Iyc?si=bIKGmhimoE8E4-QZ" target="_blank">Demo</a>
+            </div>
+            
+            <div class="project hidden">
+                <h3>Tipsy 💰🍽️<span class="tag ios">iOS</span></h3>
+                <p>🪄 Developed a smart <strong>tip calculator app</strong> that splits bills among diners based on the total amount, tip percentage, and number of people.</p>
+                <a href="https://github.com/cfbrh/tipsy" target="_blank">GitHub</a>  | 
+                <a href="https://youtu.be/ITjUU6ZViKs?si=AM-LwIhfYWFCa-_7" target="_blank">Demo</a>
+            </div>
+            
+            <div class="project hidden">
+                <h3>H4X0R 📰💻<span class="tag ios">iOS</span><span class="tag macos">macOS</span><span class="tag backend">Backend</span></h3>
+                <p>🗞️ Created a <strong>news aggregator app</strong> that fetches and displays headlines from <strong>Hacker News API</strong> in a list format. Users can tap on a headline to open the full news article.</p>
+                <a href="https://github.com/cfbrh/h4x0r" target="_blank">GitHub</a>  | 
+                <a href="https://youtu.be/pxaiGYXVS3U?si=nQY7PGegpOlWvHux" target="_blank">iOS Demo</a>  | 
+                <a href="https://youtu.be/1Pwt2rDN7yI?si=aPw5HHaQ2Hcoi3zT" target="_blank">MacOS Demo</a>
+            </div>
+            
+            <div class="project hidden">
+                <h3>Calculator 🧮📱<span class="tag ios">iOS</span></h3>
+                <p>📟 Built a sleek, user-friendly <strong>iOS calculator app</strong> mimicking Apple's default calculator, with smooth animations and precise calculations.</p>
+                <a href="https://github.com/cfbrh/calculator" target="_blank">GitHub</a>  | 
+                <a href="https://youtu.be/Dn83o7IGXHI?si=L4EBkHZ_s7h7KTlk" target="_blank">Demo</a>
+            </div>
+            
+            <div class="project hidden">
+                <h3>WhatIsIt 🔍📸<span class="tag ios">iOS</span><span class="tag ar">AR</span><span class="tag ml">ML</span></h3>
+                <p>Developed an <strong>object recognition app</strong> using <strong>Inception-v3 model</strong> to identify real-world objects and provide descriptions.</p>
+                <a href="https://github.com/cfbrh/whatisit" target="_blank">GitHub</a>  | 
+                <a href="https://youtube.com/shorts/bNkfl-NLlow?si=vkQ6FlGa_Yinycbm" target="_blank">Demo</a>
+            </div>
+            
+            <div class="project hidden">
+                <h3>WhatFlower 🌸🤖<span class="tag ios">iOS</span><span class="tag ar">AR</span><span class="tag ml">ML</span><span class="tag backend">Backend</span></h3>
+                <p>💮 Developed an <strong>flower recognition app</strong> using <strong>CoreML</strong> and <strong>FlowerClassifier model</strong>. Integrated <strong>Alamofire</strong> and <strong>SwiftyJSON</strong> to fetch and display Wikipedia information about detected flowers.</p>
+                <a href="https://github.com/cfbrh/whatflower" target="_blank">GitHub</a>  | 
+                <a href="https://youtu.be/WX5DFsdm0Z0?si=bIRtz-cEeB9uqiDA" target="_blank">Demo</a>
+            </div>
+            
+            <div class="project hidden">
+                <h3>AR Ruler 📏📐<span class="tag ios">iOS</span><span class="tag ar">AR</span></h3>
+                <p>🔍 Developed an <strong>measurement tool</strong> that allows users to measure distances in real-world environments using their phone camera.</p>
+                <a href="https://github.com/cfbrh/ar-ruler" target="_blank">GitHub</a>  | 
+                <a href="https://youtu.be/eKXA_0N07WE?si=aVwArVUZK7W85Hgg" target="_blank">Demo</a>
+            </div>
+            
+            <div class="project hidden">
+                <h3>Pock3D 🎮🔥<span class="tag ios">iOS</span><span class="tag ar">AR</span></h3>
+                <p>🐥 Created an <strong>Pokémon</strong>, where scanning a Pokémon image triggers a 3D Pokémon to appear in augmented reality.</p>
+                <a href="https://github.com/cfbrh/pock3d" target="_blank">GitHub</a>  | 
+                <a href="https://youtu.be/6oMwif73BZ4" target="_blank">Demo</a>
+            </div>
+            
+
+            <div class="project hidden">
+                <h3>Marker-Based Play 📍🔍<span class="tag ar">AR</span><span class="tag unity">Unity</span></h3>
+                <p>🖍️ Developed a marker-based AR app using <strong>Unity</strong>, allowing users to interact with 3D objects by scanning real-world markers.</p>
+                <a href="https://youtu.be/zV2zvk_hJ_I?si=ChDoqPI9jwAHdgpk" target="_blank">Demo</a>
+            </div>
+            
+            <div class="project hidden">
+                <h3>Interactive Face Filter 🎭✨<span class="tag ar">AR</span><span class="tag unity">Unity</span></h3>
+                <p>👺 Created an interactive face filter app using <strong>Unity</strong> and <strong>ARKit</strong>, enabling real-time facial tracking with animated effects.</p>
+                <a href="https://youtu.be/w5Enjwpremo?si=DtBugFa9iV8oGwir" target="_blank">Demo</a>
+            </div>
+            
+            <div class="project hidden">
+                <h3>Plane Detection 🛫📡<span class="tag ar">AR</span><span class="tag unity">Unity</span></h3>
+                <p>🧙‍♂️ Built a plane detection AR experience using <strong>Unity</strong> and <strong>ARFoundation</strong>, allowing users to place virtual objects on real-world surfaces.</p>
+                <a href="https://youtu.be/tWWVOZ7Nh9o?si=xq9XoIKqY1LJYyih" target="_blank">Demo</a>
+            </div> 
+        </div>
+        <button id="readMoreBtn" onclick="showMoreProjects()">Read More Projects</button>
+    </section>
+
+    <section id="contact">
+        <h2><a>Social Media</a></h2>
+    </section>
+
+    <footer>
+        <ul class="social_icon">
+            <li style="position: relative;"> 
+                <a href="#contact" id="copyEmail">
+                    <ion-icon name="mail-outline"></ion-icon>
+                </a>
+                <span id="copyMessage" style="color: green; font-weight: bold; display: none; position: absolute; left: -50px; top: 50%; transform: translateY(-50%); background: rgba(0, 0, 0, 0.8); color: white; padding: 5px 8px; border-radius: 5px;">
+                    Gmail Copied!
+                </span>
+            </li>
+            <li><a href="https://www.linkedin.com/in/wzhang0820/"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+            <li><a href="https://www.youtube.com/@cf2647-im9lh/playlists"><ion-icon name="logo-youtube"></ion-icon></a></li>
+            <li><a href="https://leetcode.cn/u/matisse-4/"><ion-icon name="code-slash-outline"></ion-icon></a></li>
+            <li><a href="https://github.com/cfbrh"><ion-icon name="logo-github"></ion-icon></a></li>
+        </ul>
+        <p class="copyright">Made with ❤️ by Wenjia Zhang in NYC &copy; 2025</p>
+    </footer>
+    
+    
+    
+    <!-- Ionicons Script -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    
+</body>
+</html>
+
+<script src="script.js"></script>
