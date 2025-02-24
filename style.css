@@ -115,13 +115,14 @@ h2 a:hover {
 
 #about {
     display: flex;
-    margin-top: 100px; 
+    margin-top: 130px; 
     align-items: center;
     justify-content: center;
     width: 80%;
     max-width: 1200px;
     margin: 100px auto;
-    padding: 0 5%;
+    padding: 40px 0;
+    margin-bottom: 10px;
 }
 
 .introduction {
@@ -212,6 +213,10 @@ h2 a:hover {
 
 /* Project */
 
+#projects {
+    margin-top: 10px;
+}
+
 .project {
     text-align: left;
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(148, 187, 233, 0.3)); 
@@ -263,9 +268,9 @@ h2 a:hover {
 
 .projects-container {
     display: grid;
+    margin-top: 40px;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
     gap: 20px;
-    padding: 20px;
     width: 80%;
     margin: auto;
 }
