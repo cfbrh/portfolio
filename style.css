@@ -292,13 +292,13 @@ h2 a:hover {
     text-transform: uppercase;
 }
 
-.frontend { background-color: #ffcc80; }  /* Light orange */
+.frontend { background-color: #ffd08a; }  /* Light orange */
 .backend { background-color: #90caf9; }   /* Light blue */
 .fullstack { background-color: #a5d6a7; } /* Light green */
 .ios { background-color: #ce93d8; }        /* Light purple */
 .ar { background-color: #ffab91; }         /* Light coral */
 .ml { background-color: #f48fb1; }         /* Light pink */
-.ds { background-color: #ffc400}
+.ds { background-color: #35bc14}
 .unity { background-color: #FFFACD; }  /* Lemon */
 .macos { background-color: #FAF0E6; }  /* Linen */ 
 
